@@ -19,6 +19,7 @@ public class MemberController {
                 new Member(2L, "Hồ Quang Lành", "lanh100139@donga.edu.vn", "0927192731"),
                 new Member(3L, "Huỳnh Hoàng Trâm", "tram12121@donga.edu.vn", "0912345678")
         );
+    }
 
     @GetMapping("/members")
     public String getMembers(Model model) {

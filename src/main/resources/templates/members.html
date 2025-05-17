@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách thành viên nhóm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Danh sách thành viên nhóm</h1>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Tên thành viên</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="member, iterStat : ${members}">
+        <td th:text="${iterStat.count}"></td>
+        <td th:text="${member.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
